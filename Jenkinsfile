@@ -4,7 +4,7 @@ pipeline {
     environment {
         MAVEN_HOME = tool name: 'maven', type: 'maven'
         IMAGE_NAME = 'financeproject'
-        USER_NAME = 'nkcharan'
+        USER_NAME = 'mehooman'
         DOCKERHUB_CREDENTIALS = credentials('docker-creds') // Docker credentials ID
         GIT_CREDENTIALS = credentials('github') // Assuming your GitHub credentials ID is 'github'
     }
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Clone the GitHub repository') {
             steps {
-                git branch: 'finance', credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/charannk007/Staragile-Finance-New.git'
+                git branch: 'finance', credentialsId: "${GIT_CREDENTIALS}", url: 'https://github.com/MeHuman333/project-finance.git'
             }
         }
 
